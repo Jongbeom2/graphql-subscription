@@ -1,0 +1,16 @@
+{
+  "React": {
+    "scope": "",
+    "prefix": "react",
+    "body": [
+      "interface $1Props {}",
+      "const $1:React.FC<$1Props> = () => {",
+      "return (",
+      "<div>",
+      "<div></div>",
+      "</div>)}",
+      "export default $1"
+    ],
+    "description": "Create React Component"
+  }
+}

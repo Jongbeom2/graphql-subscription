@@ -19,6 +19,9 @@ const wsLink = new GraphQLWsLink(
   }),
 );
 
+// split 을 이용하여 요청에 따라 link를 나눔.
+// link 는 클라이언트 -> 서버 -> 클라이언트 사이 데이터 흐름을 커스터마이즈하여 사용할 때 사용함.
+// 대표적으로 서버에서 인증 오류가 발생했을 때 사용함.
 const splitLink = split(
   ({ query }) => {
     const definition = getMainDefinition(query);
